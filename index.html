@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Image Processing App</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="spinner.css">
+		<link rel="stylesheet" href="utilities.css">
+
+	</head>
+	<body>
+		<!-- <h1>Hello World!</h1> -->
+<div class="grid">
+<div class="" style="padding:10px">
+
+
+	<div class="grid-2 ">
+
+		<select id="edgeDetectionOptions" class="select-v1">
+			<option value="">Choose edge detection technique</option>
+			<option value="EdgeDetectionTechniques/canny.py">Canny Edge Detector</option>
+			<option value="EdgeDetectionTechniques/prewitt.py">Prewitt Kernel</option>
+			<option value="EdgeDetectionTechniques/sobel.py">Sobel Kernel</option>
+			<option value="EdgeDetectionTechniques/laplace.py">Laplace Kernel</option>
+		</select>
+		<button type="button" id = "edgeDetectionBtn" class="btn-secondary" name="button">Apply</button>
+
+
+		<select id="segmentationOptions" class="select-v1">
+			<option value="">Choose segmentation technique</option>
+			<option value="SegmentationTechnique/felzenswalb.py">Felzenszwalb's method</option>
+			<option value="SegmentationTechnique/otsu.py">Otsu's method</option>
+		</select>
+	<button type="button"  id = "segmentationBtn" name="button" class="btn-secondary">Apply</button>
+
+
+	<select id="deepLearningOptions" class="select-v1">
+		<option value="">Choose deep learning method</option>
+		<option value="ANN/detect_and_classify_digits.py">Digits Detection</option>
+	</select>
+		<button type="button"  id = "deepLearningBtn" name="button" class="btn-secondary">Apply</button>
+	</div>
+	<div class="flex-row flex-align-center flex-content-center">
+			<button type="button" name="button" class="btn-success w-50 my-1 " id ="resetBtn">Reset Image</button>
+	</div>
+
+
+	<div class="card">
+	  <p class="text-secondary">Histogram</p>
+
+	  <canvas id="canvasHistogram" width="256" height="150"></canvas>
+	</div>
+</div>
+	<div class="mainImage " >
+	<img width="600" height = "400" id="img" style="object-fit:contain;">
+	<div class="spinner">
+		<div id="square-1"></div>
+		<div id="square-2"></div>
+		<div id="square-3"></div>
+		<div id="square-4"></div>
+		<div id="square-5"></div>
+		<div id="square-6"></div>
+		<div id="square-7"></div>
+		<div id="square-8"></div>
+		<div id="square-9"></div>
+		<div id="square-10"></div>
+		<div id="square-11"></div>
+		<div id="square-12"></div>
+		<div id="square-13"></div>
+		<div id="square-14"></div>
+	</div>
+
+	</div>
+
+
+
+</div>
+
+
+	<script src="scripts/histogram.js">	</script>
+
+	<script src="scripts/script.js">	</script>
+	</body>
+</html>
