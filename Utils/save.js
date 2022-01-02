@@ -4,7 +4,7 @@ const fs = require('fs');
 
 function saveImageFile(fileName){
 	const options = {
-		defaultPath: 'C:/Users/finti/Documents/' + fileName,
+		defaultPath: path.join('../' + __dirname,fileName),
 		buttonLabel:'Save',
 		filters:[
 			{
